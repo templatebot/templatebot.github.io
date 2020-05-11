@@ -18,10 +18,10 @@
 		
 
 		<div class="form-group">
-			<label for="">Enter Your Weight and Height:</label>
-			<input id="height" class="form-control" type="text" placeholder="Input Your Height Here">
+			<label for="">Enter Your Weight(kg) and Height(1.x):</label>
+			<input id="height" class="form-control" type="number" placeholder="Input Your Height Here">
 
-			<input id="weight" placeholder="Input Your Weight here" class="form-control" type="text">
+			<input id="weight" placeholder="Input Your Weight here" class="form-control" type="number">
 		</div>
 		<div class="form-group" style="padding-bottom: 8vh;">
 			<button id="btn-alert" class="btn btn-success btn-lg float-left" onclick="BmiCalculator()">Submit</button>
@@ -31,7 +31,7 @@
 			<h2 style="text-align:left;color:rgb(21, 66, 10);"> Your BMI: </h2>
 
 			<input id="result" class="result" >	
-		</div>
+		</div>	
 </div>
 
 		<hr>
@@ -42,6 +42,9 @@
 
 			if (!(height && weight)) {
 				alert("cannot not type empty")
+			}
+			else if ( height ==0 || weight ==0 ){
+				alert("cannot input your height or weight are 0")
 			}
 		}
 
